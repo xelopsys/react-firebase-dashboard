@@ -1,0 +1,23 @@
+html {
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	overflow: hidden;
+	font-family: regular;
+}
+
+@font-face {
+	font-family: "regular";
+	src: url("../public/fonts/PPNeueMachina-Regular.otf");
+}
+@font-face {
+	font-family: "light-M";
+	src: url("../public/fonts/PPNeueMachina-Light.otf");
+}
+@font-face {
+	font-family: "bold";
+	src: url("../public/fonts/PPNeueMachina-Ultrabold.otf");
+}

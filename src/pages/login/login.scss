@@ -1,0 +1,47 @@
+.login {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background: #fff;
+	position: relative;
+	top: 0;
+	left: 0;
+	// z-index: -1;
+	.form {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.input {
+			width: 200px;
+			height: 20px;
+			margin: 7px;
+			outline: none;
+			padding: 10px;
+			border: 1px solid rgba(139, 0, 0, 0.216);
+		}
+		button {
+			width: 222px;
+			height: 40px;
+			margin: 7px;
+			padding: 10px;
+			outline: none;
+			padding: 10px;
+			cursor: pointer;
+			background-color: #f75555;
+			color: #fff;
+			border: 1px solid rgba(139, 0, 0, 0.216);
+			&:hover {
+				background-color: #860303;
+				color: #fff;
+			}
+		}
+		.error {
+			color: red;
+			font-size: 12px;
+			margin-top: 10px;
+		}
+	}
+}

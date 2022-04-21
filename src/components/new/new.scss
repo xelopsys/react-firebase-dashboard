@@ -1,0 +1,143 @@
+.addNew {
+	width: 100%;
+	height: 100vh;
+	background-color: #f5f5f5;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	.content {
+		width: 80%;
+		height: 100%;
+		background-color: #f5f5f5;
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		align-content: center;
+		position: relative;
+	}
+	.title {
+		position: absolute;
+		top: 16px;
+		left: 30px;
+	}
+	.form {
+		width: 100%;
+		height: 70%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		align-content: flex-start;
+
+		.first {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			background-color: rgba(126, 125, 125, 0.134);
+			.imgText {
+				width: max-content;
+				height: max-content;
+				position: absolute;
+				bottom: 0;
+				right: 35%;
+				font-size: 50px;
+			}
+		}
+		.fileImg {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			// border: 0.1px solid rgba(0, 0, 0, 0.177);
+			display: flex;
+			justify-content: flex-start;
+			// background-color: rgba(126, 125, 125, 0.134);
+		}
+		.second {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			// flex-direction: row;
+			width: 500px;
+			padding: 0 10%;
+			// .nameIn {
+			// 	flex-wrap: nowrap;
+			// 	width: 100%;
+			// 	display: flex;
+			// 	flex-direction: row;
+			// }
+
+			.Email {
+				width: 100%;
+				display: block;
+			}
+			label {
+				text-align: left;
+				display: block;
+			}
+			.name {
+				margin: 15px 0;
+				outline: none;
+				text-decoration: none;
+				border: none;
+				background-color: #f5f5f5;
+				border-radius: 10px;
+				padding: 10px 20px;
+				font-size: 20px;
+				&:focus {
+					background-color: #fffdfd;
+				}
+			}
+			.group {
+				width: 100%;
+				.active {
+					// background-color: rgba(0, 128, 0, 0.05);
+					color: green;
+					display: block;
+					margin: 10px 0;
+					// width: 100%;
+				}
+				.pending {
+					// background-color: rgba(255, 217, 0, 0.05);
+					color: goldenrod;
+					display: block;
+					margin: 10px 0;
+				}
+				.passive {
+					// background-color: rgba(255, 0, 0, 0.05);
+					color: crimson;
+					display: block;
+					margin: 10px 0;
+				}
+			}
+
+			.submit {
+				padding: 10px 40px;
+				font-size: 20px;
+				outline: none;
+				border: none;
+				background-color: #ef233c;
+				border-radius: 10px;
+				color: #fff;
+				width: 100%;
+				display: block;
+				&:hover {
+					background-color: #9e0315;
+				}
+				&:disabled {
+					// background-color: #9e0315;
+					display: none;
+				}
+			}
+			.perc {
+				margin-top: 50px;
+			}
+		}
+	}
+}
