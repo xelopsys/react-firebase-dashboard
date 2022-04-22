@@ -1,12 +1,12 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Formik, Field, Form } from 'formik';
 import Sidebar from '../../pages/sidebar/Sidebar'
 import './new.scss'
 import { IoCloudUploadOutline } from "react-icons/io5";
-import { userRows } from "../../../src/datatable"
+// import { userRows } from "../../../src/datatable"
 import PreviewImage from './PreviewImage'
 import { useNavigate } from 'react-router-dom'
-import { doc, addDoc, collection, setDoc } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 import { storage, auth, db } from '../../firebase'
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
