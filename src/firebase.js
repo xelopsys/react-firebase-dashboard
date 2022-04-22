@@ -4,10 +4,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+const API = process.env.REACT_APP_FIREBASE_API_KEY;
+// console.log(process.env.REACT)
+console.log(API)
 
 
 const firebaseConfig = {
-    apiKey: "process.env.API_KEY",
+    apiKey: API,
     authDomain: "xelopsys-347121.firebaseapp.com",
     projectId: "xelopsys-347121",
     storageBucket: "xelopsys-347121.appspot.com",
