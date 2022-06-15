@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect, useReducer } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.scss'
 // import ReactDOM from 'react-dom';
@@ -8,25 +8,12 @@ import { AuthContext } from "../../context/AuthContext"
 // import firebase from "firebase/app"
 // import "firebase/auth";
 
-const Form = (state, action) => {
-    return {
-        value: '',
-        isValid: false,
-    }
-}
-
-
 function Login() {
     const [error, setError] = useState(false)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const { dispatch } = useContext(AuthContext)
     const navigate = useNavigate()
-    const [form, dispatchForm] = useReducer(Form, {
-        value: '',
-        isValid: false,
-
-    })
 
     // useEffect(() => {
     //     auth.onAuthStateChanged(user => {
