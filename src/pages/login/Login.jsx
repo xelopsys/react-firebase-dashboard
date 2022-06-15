@@ -1,10 +1,20 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect, useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './login.scss'
 // import ReactDOM from 'react-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase';
 import { AuthContext } from "../../context/AuthContext"
+// import firebase from "firebase/app"
+// import "firebase/auth";
+
+const Form = (state, action) => {
+    return {
+        value: '',
+        isValid: false,
+    }
+}
+
 
 function Login() {
     const [error, setError] = useState(false)
@@ -12,7 +22,20 @@ function Login() {
     const [password, setPassword] = useState("")
     const { dispatch } = useContext(AuthContext)
     const navigate = useNavigate()
+    const [form, dispatchForm] = useReducer(Form, {
+        value: '',
+        isValid: false,
 
+    })
+
+    // useEffect(() => {
+    //     auth.onAuthStateChanged(user => {
+    //         if (user) {
+    //             user.getIdToken().then(token => console.log(token))
+
+    //         }
+    //     })
+    // }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -21,6 +44,7 @@ function Login() {
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
+                // console.log(user)
                 dispatch({ type: "LOGIN", payload: user })
                 // console.log(user)
                 navigate("/")

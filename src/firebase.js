@@ -4,18 +4,18 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
-const API = process.env.REACT_APP_FIREBASE_API_KEY;
+const config = process.env;
 
 
 
 const firebaseConfig = {
-    apiKey: API,
-    authDomain: "xelopsys-347121.firebaseapp.com",
-    projectId: "xelopsys-347121",
-    storageBucket: "xelopsys-347121.appspot.com",
-    messagingSenderId: "545755506882",
-    appId: "1:545755506882:web:91c8c1cc8bc2f199a6335b",
-    measurementId: "G-SJZEKX6L4Z"
+    apiKey: config.REACT_APP_FIREBASE_API_KEY,
+    authDomain: config.REACT_APP_AUTH_DOMAIN,
+    projectId: config.REACT_APP_PROJECT_ID,
+    storageBucket: config.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: config.REACT_APP_MESSAGING_SENDER_ID,
+    appId: config.REACT_APP_APP_ID,
+    measurementId: config.REACT_APP_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
